@@ -1,6 +1,6 @@
 ## PaaS_migration
 ### 介绍
-    Paas_migration是启业云基于flyway社区版开源项目进行二次改造符合本公司特定业务需求场景的一个数据迁移工具
+    migration_tool 是基于flyway社区版开源项目进行二次改造支持undo功能及批量执行功能的一个数据迁移工具
 ---
 ### 技术栈
 * flyway:7.15.0 **(7.15.0是社区版目前支持mysql5.7的最高版本)**
