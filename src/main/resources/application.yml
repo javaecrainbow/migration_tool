@@ -1,0 +1,28 @@
+application:
+    version: 1.0
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://172.168.0.109:3306/master?setUnicode=true&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=Asia/Shanghai
+        username: master
+        password: pZdxysqJX4bK4VrB
+    flyway:
+        locations: classpath:/com/qpaas/migration/db/mysql
+        baseline-on-migrate: true
+        table: ${migration.env}_qpaas_flyway_schema_history
+        validate-on-migrate: true
+        clean-disabled: true
+        placeholders:
+            db_master_schema: master
+            db_user_schema: users
+        schemas: migration
+
+migration:
+    env: stable
+    exeModel: auto
+    skipErrorEntSql: false
+
+logging:
+    level:
+        root: error
+        org:
+            flywaydb: warn
