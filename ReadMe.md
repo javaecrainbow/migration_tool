@@ -1,4 +1,4 @@
-## PaaS_migration
+## Migration Tool
 ### 介绍
     migration_tool 是基于flyway社区版开源项目进行二次改造支持undo功能及批量执行功能的一个数据迁移工具
 ---
